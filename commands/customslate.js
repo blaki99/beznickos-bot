@@ -6,8 +6,8 @@ module.exports.run = async (blaki, message, args) => {
 
     let pass = (args[0]);
     let mode = args.join(" ").slice(7);
-    const zasady1 = "**»** WIĘCEJ NIŻ 50 WALCZYMY OD ZAMKNIĘCIA SIĘ 3 STREFY !"
-    const zasady2 = "**»** MNIEJ NIŻ 50 WALCZYMY OD ZAMKNIĘCIA SIĘ 4 STREFY !"
+    const zasady1 = "**»** WIĘCEJ NIŻ 50 OSÓB WALCZYMY OD ZAMKNIĘCIA SIĘ 3 STREFY !"
+    const zasady2 = "**»** MNIEJ NIŻ 50 OSÓB WALCZYMY OD ZAMKNIĘCIA SIĘ 4 STREFY !"
     const zasady3 = "**»** NIE BIJEMY INNYCH OSÓB NA MIEJSCÓWKACH !"
     const check = '579026088487813160'
 
