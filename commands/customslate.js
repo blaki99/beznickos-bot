@@ -8,7 +8,7 @@ module.exports.run = async (blaki, message, args) => {
     let mode = args.join(" ").slice(7);
     const zasady1 = "**»** WIĘCEJ NIŻ 50 OSÓB WALCZYMY OD ZAMKNIĘCIA SIĘ 3 STREFY !"
     const zasady2 = "**»** MNIEJ NIŻ 50 OSÓB WALCZYMY OD ZAMKNIĘCIA SIĘ 4 STREFY !"
-    const zasady3 = "**»** NIE BIJEMY INNYCH OSÓB NA MIEJSCÓWKACH !"
+    const zasady3 = "**»** JEŻELI WŁĄCZY SIĘ GNIEW BURZY BIJEMY SIĘ PO 10 SEKUNDACH !"
     const check = '579026088487813160'
 
     if(!message.member.roles.has(Szefuncio.id)) return message.reply("oops");
