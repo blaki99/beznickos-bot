@@ -23,7 +23,7 @@ module.exports.run = async (blaki, message, args) => {
     .setTitle("__**POWIADOMIENIE O NOWEJ GRZE**__")
     .addField("Hasło:", `**${pass}**`)
     .addField("Tryb Gry:", `**${mode}**`)
-    .addField("Zasady:", zasady1 + `\n`+ zasady2 + `\n`+ zasady3)
+    .addField("Zasady:", zasady1 + `\n`+ zasady2 + `\n`+ zasady3 + `\n`+ zasady4)
     .setTimestamp(message.createdAt)
     .setFooter("Kliknij reakcje jeśli grasz", "https://i.imgur.com/g10ycEV.png");
     message.channel.send(customEmbed).then(function (message) {
