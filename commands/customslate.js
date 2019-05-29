@@ -6,10 +6,10 @@ module.exports.run = async (blaki, message, args) => {
 
     let pass = (args[0]);
     let mode = args.join(" ").slice(7);
-    const zasady1 = "**»** WIĘCEJ NIŻ 50 OSÓB WALCZYMY OD ZAMKNIĘCIA SIĘ 3 STREFY !"
-    const zasady2 = "**»** MNIEJ NIŻ 50 OSÓB WALCZYMY OD ZAMKNIĘCIA SIĘ 4 STREFY !"
-    const zasady3 = "**»** JEŻELI WŁĄCZY SIĘ GNIEW BURZY BIJEMY SIĘ PO 10 SEKUNDACH !"
-    const zasady4 = "**»** NIE BIJEMY INNYCH OSÓB NA MIEJSCÓWKACH !"
+    const zasady1 = "***» WIĘCEJ NIŻ 50 OSÓB WALCZYMY OD ZAMKNIĘCIA SIĘ 3 STREFY !***"
+    const zasady2 = "***» MNIEJ NIŻ 50 OSÓB WALCZYMY OD ZAMKNIĘCIA SIĘ 4 STREFY !***"
+    const zasady3 = "***» JEŻELI WŁĄCZY SIĘ GNIEW BURZY BIJEMY SIĘ PO 10 SEKUNDACH !***"
+    const zasady4 = "***» NIE BIJEMY INNYCH OSÓB NA MIEJSCÓWKACH !***"
     const check = '579026088487813160'
 
     if(!message.member.roles.has(Szefuncio.id)) return message.reply("oops");
@@ -19,7 +19,7 @@ module.exports.run = async (blaki, message, args) => {
     })
     message.delete();
     let customEmbed = new Discord.RichEmbed()
-    .setColor("#FFFFFF")
+    .setColor("#ff1a1a")
     .setTitle("__**POWIADOMIENIE O NOWEJ GRZE**__")
     .addField("Hasło:", `**${pass}**`)
     .addField("Tryb Gry:", `**${mode}**`)
