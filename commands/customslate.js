@@ -19,7 +19,7 @@ module.exports.run = async (blaki, message, args) => {
     })
     message.delete();
     let customEmbed = new Discord.RichEmbed()
-    .setColor("#66CCFF")
+    .setColor(RANDOM)
     .setTitle("__**POWIADOMIENIE O NOWEJ GRZE**__")
     .addField("Hasło:", `**${pass}**`)
     .addField("Tryb Gry:", `**${mode}**`)
