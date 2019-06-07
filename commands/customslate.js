@@ -6,6 +6,8 @@ module.exports.run = async (blaki, message, args) => {
 
     let pass = (args[0]);
     let mode = args.join(" ").slice(7);
+    const zasady = "***» NIE LATAMY NA MEKSYK!***"
+    const zasady0 = "***» WIĘCEJ NIŻ 80 OSÓB WALCZYMY OD 2 STREFY !***"
     const zasady1 = "***» WIĘCEJ NIŻ 50 OSÓB WALCZYMY OD ZAMKNIĘCIA SIĘ 3 STREFY !***"
     const zasady2 = "***» MNIEJ NIŻ 50 OSÓB WALCZYMY OD ZAMKNIĘCIA SIĘ 4 STREFY !***"
     const zasady3 = "***» JEŻELI WŁĄCZY SIĘ GNIEW BURZY BIJEMY SIĘ PO 10 SEKUNDACH !***"
@@ -23,7 +25,7 @@ module.exports.run = async (blaki, message, args) => {
     .setTitle("__**POWIADOMIENIE O NOWEJ GRZE**__")
     .addField("Hasło:", `**${pass}**`)
     .addField("Tryb Gry:", `**${mode}**`)
-    .addField("Zasady:", zasady1 + `\n`+ zasady2 + `\n`+ zasady3 + `\n`+ zasady4)
+    .addField("Zasady:", zasady + `\n` + `\n` zasady0 + `\n` +zasady1 + `\n`+ zasady2 + `\n`+ zasady3 + `\n`+ zasady4)
     .setTimestamp(message.createdAt)
     .setFooter("Kliknij reakcje jeśli grasz", "https://i.imgur.com/g10ycEV.png");
     message.channel.send(customEmbed).then(function (message) {
