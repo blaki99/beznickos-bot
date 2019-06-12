@@ -6,11 +6,11 @@ module.exports.run = async (blaki, message, args) => {
 
     let pass = (args[0]);
     let mode = args.join(" ").slice(7);
-    const zasady0 = "***» WIĘCEJ NIŻ 80 OSÓB WALCZYMY OD 2 STREFY !***"
-    const zasady1 = "***» WIĘCEJ NIŻ 50 OSÓB WALCZYMY OD ZAMKNIĘCIA SIĘ 3 STREFY !***"
-    const zasady2 = "***» MNIEJ NIŻ 50 OSÓB WALCZYMY OD ZAMKNIĘCIA SIĘ 4 STREFY !***"
-    const zasady3 = "***» JEŻELI WŁĄCZY SIĘ GNIEW BURZY BIJEMY SIĘ PO 10 SEKUNDACH !***"
-    const zasady4 = "***» NIE BIJEMY INNYCH OSÓB NA MIEJSCÓWKACH !***"
+    const zasady0 = "***» WALCZYMY OD ZAMKNIĘCIA 2 STREFY JAK JEST 70+ OSÓB LUB JAK SIĘ POJAWI STORM SURGE!***"
+    const zasady1 = "***» WALCZYMY OD ZAMKNIĘCIA SIĘ 3 STREFY JAK JEST 55-70 OSÓB !***"
+    const zasady2 = "***» MNIEJ NIŻ 55 OSÓB WALCZYMY OD ZAMKNIĘCIA SIĘ 4 STREFY !***"
+    const zasady3 = "***» NIE LATAJ NA PODIUM I NIE BIEGAJ ZA BEZNICKOSEM BO ZGINIESZ !***"
+    const zasady4 = "***» NIE BIJEMY SIĘ NA PIERWSZYCH MIEJSCÓWKACH !***"
     const check = '579026088487813160'
 
     if(!message.member.roles.has(Szefuncio.id)) return message.reply("oops");
