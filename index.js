@@ -67,7 +67,7 @@ blaki.on("message", async message => {
 blaki.on('guildMemberAdd', async member =>
 {
   let WelcomeChannel = blaki.channels.get("575434920327905281");
-  WelcomeChannel.send(`Hejka ${member} Witamy Cię wśród króliczkowej rodzinki Beznickosa 🥕 🐰!`);
+  WelcomeChannel.send(`Hejka ${member}! Witamy Cię wśród króliczkowej rodzinki Beznickosa 🥕 🐰!`);
 });
 
 blaki.login(config.token);
