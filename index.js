@@ -64,4 +64,10 @@ blaki.on("message", async message => {
   
 });
 
+blaki.on('guildMemberAdd', async member =>
+{
+  let WelcomeChannel = blaki.channels.get("575434920327905281");
+  WelcomeChannel.send(`Witaj ${member} na serwerze **KRÓLICZKI BEZNICKOSA** 💕!`);
+});
+
 blaki.login(config.token);
