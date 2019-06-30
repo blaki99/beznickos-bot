@@ -10,6 +10,8 @@ const config = {
     token: process.env.TOKEN
 };
 
+let date = require('date-and-time');
+
 blaki.on('ready', async () => 
 {
   console.log(`${blaki.user.username} jest online!`);
