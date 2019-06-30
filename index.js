@@ -10,9 +10,24 @@ const config = {
     token: process.env.TOKEN
 };
 
-blaki.on('ready', async () => {
-    console.log(`${blaki.user.username} jest online!`);
-    blaki.user.setActivity('KOD BEZNICKOS W SKLEPIE!', { type: 'WATCHING'});
+blaki.on('ready', async () => 
+{
+  console.log(`${blaki.user.username} jest online!`);
+  blaki.user.setActivity('KOD BEZNICKOS W SKLEPIE', { type: 'WATCHING'});
+    
+  const guild = blaki.guilds.get('575434337554792450');
+  setInterval(function() 
+  {
+    let now = new Date();
+    const DateChannel = blaki.channels.get("575439646197284864");
+    const HumansChannel = blaki.channels.get("575434927303032833");
+    const OnlineChannel = blaki.channels.get("575439698516770836");
+    var HumansCount = guild.members.filter(m => !m.user.bot).size;
+    var OnlineCount = guild.members.filter(m => m.presence.status === 'online').size
+    DateChannel.setName("📅 " + date.format(now, 'DD.MM.YYYY'));
+    OnlineChannel.setName("💚 Aktywni: " + OnlineCount);
+    HumansChannel.setName("🐰 Jest Nas: " + HumansCount);
+  }, 30000)
 });
 
 fs.readdir("./commands/", (err, files) => {
