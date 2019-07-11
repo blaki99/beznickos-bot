@@ -5,7 +5,7 @@ module.exports.run = async (blaki, message, args) => {
     let Szefuncio = message.guild.roles.find("name", "SZEFUNCIO 🎓");
 
     let pass = (args[0]);
-    let mode = args.join(" ").slice(7);
+    let mode = args.slice(1).join(' ')
     const ping = "<@&589872200694235162>"
     const zasady0 = "***» WALCZYMY OD ZAMKNIĘCIA 2 STREFY JAK JEST 70+ OSÓB LUB JAK SIĘ POJAWI STORM SURGE!***"
     const zasady1 = "***» WALCZYMY OD ZAMKNIĘCIA SIĘ 3 STREFY JAK JEST 55-70 OSÓB !***"
