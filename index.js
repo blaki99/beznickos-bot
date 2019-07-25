@@ -1,6 +1,6 @@
 const blakiconfig = require("./blakiconfig.json");
 const Discord = require('discord.js');
-const blaki = new Discord.Client({disableEveryone: true});
+const blaki = new Discord.Client({disableEveryone: false});
 require('dotenv-flow').config();
 
 const fs = require("fs");
