@@ -6,7 +6,7 @@ module.exports.run = async (blaki, message, args) => {
 
     let pass = (args[0]);
     let mode = args.slice(1).join(' ')
-    const ping = "<@&589872200694235162>"
+    let everyone = message.guild.defaultRole;
     const zasady0 = "***» WALCZYMY OD ZAMKNIĘCIA 2 STREFY JAK JEST 70+ OSÓB LUB JAK SIĘ POJAWI STORM SURGE!***"
     const zasady1 = "***» WALCZYMY OD ZAMKNIĘCIA SIĘ 3 STREFY JAK JEST 55-70 OSÓB !***"
     const zasady2 = "***» MNIEJ NIŻ 55 OSÓB WALCZYMY OD ZAMKNIĘCIA SIĘ 4 STREFY !***"
@@ -28,7 +28,7 @@ module.exports.run = async (blaki, message, args) => {
     .addField("**Zasady:**", zasady0 + `\n` +zasady1 + `\n`+ zasady2 + `\n`+ zasady3 + `\n`+ zasady4)
     .setTimestamp(message.createdAt)
     .setFooter("Kliknij reakcje jeśli grasz", "https://i.imgur.com/g10ycEV.png");
-    message.channel.send(ping)
+    message.channel.send(everyone.toString());
     message.channel.send(customEmbed).then(function (message) {
         message.react(check)
     })
