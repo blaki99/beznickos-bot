@@ -24,8 +24,8 @@ blaki.on('ready', async () =>
   console.log(`${blaki.user.username} jest online!`);
   setInterval(function() {
       var actID = Math.floor(Math.random() * Math.floor(aktywnosc.length));
-      blaki.user.setActivity(aktywnosc[actID], { type: 'WATCHING'});
-  }, 10000);
+      blaki.user.setActivity(aktywnosc[actID]);
+  }, 5000);
     
   const guild = blaki.guilds.get('575434337554792450');
   setInterval(function() 
