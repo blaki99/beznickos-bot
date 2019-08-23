@@ -10,12 +10,22 @@ const config = {
     token: process.env.TOKEN
 };
 
+const aktywnosc = [
+    "WPISZ 🖤", 
+    "KOD 🧡", 
+    "BEZNICKOS 💚",
+    "W SKLEPIE 💛"
+];
+
 let date = require('date-and-time');
 
 blaki.on('ready', async () => 
 {
   console.log(`${blaki.user.username} jest online!`);
-  blaki.user.setActivity('KOD BEZNICKOS W SKLEPIE', { type: 'WATCHING'});
+  setInterval(function() {
+      var actID = Math.floor(Math.random() * Math.floor(aktywnosc.length));
+      blaki.user.setActivity(aktywnosc[actID], { type: 'WATCHING'});
+  }, 10000);
     
   const guild = blaki.guilds.get('575434337554792450');
   setInterval(function() 
@@ -54,7 +64,16 @@ blaki.on("message", async message => {
     if(message.author.blaki) return;
     if(message.channel.type === "dm") return;
   
-    let prefix = blakiconfig.prefix;
+    let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
+    if(!prefixes[message.guild.id]){
+    prefixes[message.guild.id] = {
+      prefixes: blakiconfig.prefix
+      };
+    }
+
+    let prefix = prefixes[message.guild.id].prefixes;
+    if(!message.content.startsWith(prefix)) return;
+    
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
