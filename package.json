@@ -11,10 +11,14 @@
   "dependencies": {
     "data": "^0.6.1",
     "date-and-time": "^0.6.3",
-    "discord.js": "^11.4.2",
+    "discord.js": "^11.5.1",
     "dotenv": "^8.0.0",
     "dotenv-flow": "^0.4.0",
     "fortnite": "^4.3.2",
-    "fs": "0.0.1-security"
+    "fortnite-publicapi": "^1.0.0",
+    "fs": "0.0.1-security",
+    "ms": "^2.1.2",
+    "sync-request": "^6.0.0",
+    "node-schedule": "^1.3.2"
   }
 }
