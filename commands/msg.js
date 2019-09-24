@@ -19,7 +19,7 @@ module.exports.run = async (blaki, message, args) => {
 ${msg} ${msg2}${ramka2}`)
     .addField("__**OD:**__", `${message.author}`)
     .setTimestamp(message.createdAt)
-    .setFooter("Nowa Informacja", `${config.avatar}`);
+    .setFooter("Nowa Informacja", "https://i.imgur.com/g10ycEV.png");
     message.channel.send(msgEmbed);
 }
 
